@@ -40,4 +40,13 @@ def submit_nilai():
             )
             return
 
+        if biologi > fisika and biologi > inggris:
+            prediksi = "Kedokteran"
+        elif fisika > biologi and fisika > inggris:
+            prediksi = "Teknik"
+        elif inggris > biologi and inggris > fisika:
+            prediksi = "Bahasa"
+        else:
+            prediksi = "Nilai tertinggi seri"
+
         
