@@ -30,4 +30,14 @@ def submit_nilai():
         fisika = float(entry_fisika.get())
         inggris = float(entry_inggris.get())
 
+        if not nama:
+            messagebox.showwarning("Peringatan", "Nama siswa harus diisi!")
+            return
+
+        if not all(0 <= n <= 100 for n in [biologi, fisika, inggris]):
+            messagebox.showwarning(
+                "Peringatan", "Nilai harus antara 0 sampai 100!"
+            )
+            return
+
         
