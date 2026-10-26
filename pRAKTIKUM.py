@@ -49,4 +49,12 @@ def submit_nilai():
         else:
             prediksi = "Nilai tertinggi seri"
 
+        cursor.execute("""
+            INSERT INTO nilai_siswa
+            (nama_siswa, biologi, fisika, inggris, prediksi_fakultas)
+            VALUES (?, ?, ?, ?, ?)
+        """, (nama, biologi, fisika, inggris, prediksi))
+
+        conn.commit()
+
         
