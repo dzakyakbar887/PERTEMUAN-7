@@ -95,3 +95,17 @@ entry_fisika.pack(pady=5)
 tk.Label(root, text="Nilai Inggris").pack(anchor="w")
 entry_inggris = tk.Entry(root, width=35)
 entry_inggris.pack(pady=5)
+
+tk.Button(root, text="Submit Nilai",
+          command=submit_nilai,
+          bg="lightblue").pack(pady=15)
+
+label_hasil = tk.Label(
+    root, text="Hasil Prediksi: -",
+    font=("Arial", 11, "bold")
+)
+label_hasil.pack(pady=5)
+
+
+# Menjalankan aplikasi
+root.mainloop()
