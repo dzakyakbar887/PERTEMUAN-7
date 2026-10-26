@@ -71,3 +71,27 @@ def submit_nilai():
         )
 
 
+# Membuat tampilan Tkinter
+root = tk.Tk()
+root.title("Prediksi Fakultas Siswa")
+root.geometry("400x430")
+root.configure(padx=20, pady=20)
+
+tk.Label(root, text="PREDIKSI FAKULTAS SISWA",
+         font=("Arial", 14, "bold")).pack(pady=10)
+
+tk.Label(root, text="Nama Siswa").pack(anchor="w")
+entry_nama = tk.Entry(root, width=35)
+entry_nama.pack(pady=5)
+
+tk.Label(root, text="Nilai Biologi").pack(anchor="w")
+entry_biologi = tk.Entry(root, width=35)
+entry_biologi.pack(pady=5)
+
+tk.Label(root, text="Nilai Fisika").pack(anchor="w")
+entry_fisika = tk.Entry(root, width=35)
+entry_fisika.pack(pady=5)
+
+tk.Label(root, text="Nilai Inggris").pack(anchor="w")
+entry_inggris = tk.Entry(root, width=35)
+entry_inggris.pack(pady=5)
