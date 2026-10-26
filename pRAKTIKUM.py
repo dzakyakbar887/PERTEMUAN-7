@@ -21,3 +21,13 @@ CREATE TABLE IF NOT EXISTS nilai_siswa (
 conn.commit()
 
 
+# Fungsi prediksi dan penyimpanan data
+def submit_nilai():
+    nama = entry_nama.get().strip()
+
+    try:
+        biologi = float(entry_biologi.get())
+        fisika = float(entry_fisika.get())
+        inggris = float(entry_inggris.get())
+
+        
