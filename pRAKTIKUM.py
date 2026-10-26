@@ -57,4 +57,17 @@ def submit_nilai():
 
         conn.commit()
 
-        
+        label_hasil.config(text=f"Hasil Prediksi: {prediksi}")
+        messagebox.showinfo("Berhasil", "Data berhasil disimpan!")
+
+        entry_nama.delete(0, tk.END)
+        entry_biologi.delete(0, tk.END)
+        entry_fisika.delete(0, tk.END)
+        entry_inggris.delete(0, tk.END)
+
+    except ValueError:
+        messagebox.showerror(
+            "Error", "Masukkan nilai berupa angka yang valid!"
+        )
+
+
